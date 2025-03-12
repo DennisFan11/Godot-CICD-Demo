@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://vsfqltfop1fu"]
+
+[ext_resource type="Texture2D" uid="uid://bt47oifqa44v7" path="res://icon.svg" id="1_2w1kt"]
+[ext_resource type="Script" uid="uid://blxxfmwwv470e" path="res://Main/icon.gd" id="2_qvhan"]
+
+[node name="Main" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(1000, 1000)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1456.0
+offset_top = -1157.0
+offset_right = 1433.0
+offset_bottom = 1318.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0867998, 0.317601, 0.493786, 1)
+
+[node name="Icon" type="Sprite2D" parent="."]
+texture = ExtResource("1_2w1kt")
+script = ExtResource("2_qvhan")
+
+[node name="Label" type="Label" parent="Icon"]
+offset_left = -72.0
+offset_top = -92.0
+offset_right = 67.0
+offset_bottom = -69.0
+text = "Godot CICD Demo"
+
+[node name="Label2" type="Label" parent="Icon"]
+offset_left = 66.0
+offset_top = 89.0
+offset_right = 205.0
+offset_bottom = 112.0
+scale = Vector2(-1, -1)
+text = "Godot CICD Demo"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.705, 1.705)
