@@ -13,7 +13,7 @@ env:
 jobs:
   export-windows:
     name: Windows Export
-    runs-on: ubuntu-22.04  # Use 22.04 with godot 4
+    runs-on: ubuntu-latest
     container:
       image: barichello/godot-ci:4.4
     steps:
@@ -41,7 +41,7 @@ jobs:
 
   export-linux:
     name: Linux Export
-    runs-on: ubuntu-22.04  # Use 22.04 with godot 4
+    runs-on: ubuntu-latest
     container:
       image: barichello/godot-ci:4.4
     steps:
@@ -67,7 +67,7 @@ jobs:
 
   export-web:
     name: Web Export
-    runs-on: ubuntu-22.04  # Use 22.04 with godot 4
+    runs-on: ubuntu-latest
     container:
       image: barichello/godot-ci:4.4
     steps:
@@ -94,7 +94,7 @@ jobs:
   deploy-itchio-linux:
     name: Deploy to Itch.io
     needs: export-linux  # 确保 Linux 版本导出完成后再执行
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v4
@@ -116,7 +116,7 @@ jobs:
   deploy-itchio-windows:
     name: Deploy to Itch.io
     needs: export-windows  # 确保 windows 版本导出完成后再执行
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v4
@@ -138,7 +138,7 @@ jobs:
   deploy-itchio-web:
     name: Deploy to Itch.io
     needs: export-web  # 确保 web 版本导出完成后再执行
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v4
