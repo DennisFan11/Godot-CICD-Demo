@@ -14,3 +14,7 @@ config/name="Godot-CICD-Demo"
 run/main_scene="uid://vsfqltfop1fu"
 config/features=PackedStringArray("4.4")
 config/icon="res://icon.svg"
+
+[rendering]
+
+textures/vram_compression/import_etc2_astc=true
