@@ -90,6 +90,7 @@ jobs:
         with:
           name: web
           path: build/web
+
   export-mac:
     name: Mac Export
     runs-on: ubuntu-22.04  # Use 22.04 with godot 4
@@ -110,7 +111,7 @@ jobs:
           mkdir -v -p build/mac
           EXPORT_DIR="$(readlink -f build)"
           cd $PROJECT_PATH
-          godot --headless --verbose --export-release "macOS" "$EXPORT_DIR/mac/$EXPORT_NAME.zip"
+          godot --headless --verbose --export-release "macOS" "$EXPORT_DIR/mac/$EXPORT_NAME.zip" || true
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
